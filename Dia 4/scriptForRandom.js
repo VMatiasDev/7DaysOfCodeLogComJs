@@ -4,6 +4,9 @@ function forRandom(){
         const escolha = prompt('Advinhe um número de 0-10')
         if (escolha != numeroRandom) {
             alert(`Você errou! Você tem mais ${-index - 1 + 3} tentativas`)
+            if (index == 2) {
+                alert (`O número correto era ${numeroRandom}`)
+            }
         } else {
             alert (`Parabéns! Você acertou! O número era ${numeroRandom}`)
             break
