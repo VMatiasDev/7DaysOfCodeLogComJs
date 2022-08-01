@@ -63,14 +63,14 @@ function main() {
                 alert('Item removido com sucesso!')
             } else if (listaLaticinios.includes(' ' + remover)) {
                 let posicao = listaLaticinios.indexOf(remover)
-                listaFrutas.splice(posicao, 1)
+                listaLaticinios.splice(posicao, 1)
                 alert('Item removido com sucesso!')
             } else if (listaCongelados.includes(' ' + remover)) {
-                let posicao = listaFrutas.indexOf(remover)
+                let posicao = listaCongelados.indexOf(remover)
                 listaCongelados.splice(posicao, 1)
                 alert('Item removido com sucesso!')
             } else if (listaDoces.includes(' ' + remover)) {
-                let posicao = listaFrutas.indexOf(remover)
+                let posicao = listaDoces.indexOf(remover)
                 listaDoces.splice(posicao, 1)
                 alert('Item removido com sucesso!')
             } else {
