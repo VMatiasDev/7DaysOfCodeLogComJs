@@ -37,7 +37,7 @@ function main() {
         case "4": const adicionarItem4 = listaDoces.push(' ' + escolherItem)
         break
     }
-    adicionar = prompt('Você deseja adicionar ou remover um item da sua lista? Digite "1" para adicionar ou "2" para remover!')
+    adicionar = prompt('Você deseja adicionar ou remover um item da sua lista? Digite "1" para adicionar ou "2" para remover! Caso queira encerrar e ver sua lista, digite outra coisa')
     while (adicionar == '1' || '2') {
     if (adicionar == '1') {
         let escolherItem = prompt('Qual comida?')
@@ -77,7 +77,8 @@ function main() {
                 alert('O item digitado não está em nenhuma lista')
             }
         }
-        adicionar = prompt('Você deseja adicionar ou remover um item da sua lista? Digite "1" para adicionar ou "2" para remover!')
+        adicionar = prompt('Você deseja adicionar ou remover um item da sua lista? Digite "1" para adicionar ou "2" para remover! Caso queira encerrar e ver sua lista, digite outra coisa')
+        break
     }
     
     alert(`Sua lista de compras é:
