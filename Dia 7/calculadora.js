@@ -10,52 +10,52 @@ mostrando uma mensagem "Até a próxima". */
 
 /* Criar as funções pra cada operação > Criar o prompt que vai perguntar qual operação fazer > Alert com o resultado */
 
-function soma (soma1, soma2) {
-    return soma1 + soma2
-}
-
-function subtracao (subtracao1, subtracao2) {
-    return subtracao1 - subtracao2
-}
-
-function multiplicacao (multiplicacao1, multiplicacao2) {
-    return multiplicacao1 * multiplicacao2
-}
-
-function divisao (divisao1, divisao2) {
-    return divisao1 / divisao2
-}
-
 function calc(){
 let escolha = prompt('Digite a operação que deseja realizar: "soma", "subtracao", "multiplicacao", "divisao" ou "sair"')
 switch(escolha) {
     case "soma":
-        let numero1Soma = parseFloat(prompt('Digite o primeiro valor'))
-        let numero2Soma = parseFloat(prompt('Digite o segundo valor'))
-        let resultadoSoma = numero1Soma + numero2Soma
-        alert('O resultado da soma é: ' + resultadoSoma)
+        soma()
         break
     case "subtracao":
-        let numero1Subtracao = parseFloat(prompt('Digite o primeiro valor'))
-        let numero2Subtracao = parseFloat(prompt('Digite o segundo valor'))
-        let resultadoSubtracao = numero1Subtracao - numero2Subtracao
-        alert('O resultado da subtração é: ' + resultadoSubtracao)
+        subtracao()
         break
     case "multiplicacao":
-        let numero1Multiplicacao = parseFloat(prompt('Digite o primeiro valor'))
-        let numero2Multiplicacao = parseFloat(prompt('Digite o segundo valor'))
-        let resultadoMultiplicacao = numero1Multiplicacao * numero2Multiplicacao
-        alert('O resultado da multiplicação é: ' + resultadoMultiplicacao)
+        multiplicacao()
         break
     case "divisao":
-        let numero1Divisao = parseFloat(prompt('Digite o primeiro valor'))
-        let numero2Divisao = parseFloat(prompt('Digite o segundo valor'))
-        let resultadoDivisao = numero1Divisao / numero2Divisao
-        alert('O resultado da divisão é: ' + resultadoDivisao)
+        divisao()
         break
     case "sair":
         alert('Até mais!')
     default:
         alert('Opção inválida')
 }
+}
+
+function soma () {
+    let numero1Soma = parseFloat(prompt('Digite o primeiro valor'))
+    let numero2Soma = parseFloat(prompt('Digite o segundo valor'))
+    let resultadoSoma = numero1Soma + numero2Soma
+    alert('O resultado da soma é: ' + resultadoSoma)
+}
+
+function subtracao () {
+    let numero1Subtracao = parseFloat(prompt('Digite o primeiro valor'))
+    let numero2Subtracao = parseFloat(prompt('Digite o segundo valor'))
+    let resultadoSubtracao = numero1Subtracao - numero2Subtracao
+    alert('O resultado da subtração é: ' + resultadoSubtracao)
+}
+
+function multiplicacao () {
+    let numero1Multiplicacao = parseFloat(prompt('Digite o primeiro valor'))
+    let numero2Multiplicacao = parseFloat(prompt('Digite o segundo valor'))
+    let resultadoMultiplicacao = numero1Multiplicacao * numero2Multiplicacao
+    alert('O resultado da multiplicação é: ' + resultadoMultiplicacao)
+}
+
+function divisao () {
+    let numero1Divisao = parseFloat(prompt('Digite o primeiro valor'))
+    let numero2Divisao = parseFloat(prompt('Digite o segundo valor'))
+    let resultadoDivisao = numero1Divisao / numero2Divisao
+    alert('O resultado da divisão é: ' + resultadoDivisao)
 }
