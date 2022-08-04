@@ -27,6 +27,7 @@ switch(escolha) {
         break
     case "sair":
         alert('Até mais!')
+        break
     default:
         alert('Opção inválida')
 }
