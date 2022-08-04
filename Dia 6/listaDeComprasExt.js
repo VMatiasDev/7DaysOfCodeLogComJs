@@ -38,7 +38,7 @@ function main() {
         break
     }
     adicionar = prompt('Você deseja adicionar ou remover um item da sua lista? Digite "1" para adicionar ou "2" para remover! Caso queira encerrar e ver sua lista, digite outra coisa')
-    while (adicionar == '1' || '2') {
+    while (adicionar == '1' || adicionar == '2') {
     if (adicionar == '1') {
         let escolherItem = prompt('Qual comida?')
         let escolherCategoria = prompt('Qual categoria? Digite 1 para "Frutas", 2 para "Laticínios", 3 para "Congelados" ou 4 para "Doces"')
@@ -57,28 +57,19 @@ function main() {
             Laticínios: ${listaLaticinios};
             Congelados: ${listaCongelados};
             Doces: ${listaDoces}`)
-            if (listaFrutas.includes(' ' + remover)) {
-                let posicao = listaFrutas.indexOf(remover)
-                listaFrutas.splice(posicao, 1)
-                alert('Item removido com sucesso!')
-            } else if (listaLaticinios.includes(' ' + remover)) {
-                let posicao = listaLaticinios.indexOf(remover)
-                listaLaticinios.splice(posicao, 1)
-                alert('Item removido com sucesso!')
-            } else if (listaCongelados.includes(' ' + remover)) {
-                let posicao = listaCongelados.indexOf(remover)
-                listaCongelados.splice(posicao, 1)
-                alert('Item removido com sucesso!')
-            } else if (listaDoces.includes(' ' + remover)) {
-                let posicao = listaDoces.indexOf(remover)
-                listaDoces.splice(posicao, 1)
-                alert('Item removido com sucesso!')
+            if (temItem(listaFrutas, remover)) {
+                removeItem(listaFrutas, remover)
+            } else if (temItem(listaLaticinios, remover)) {
+                removeItem(listaLaticinios, remover)
+            } else if (temItem(listaCongelados, remover)) {
+                removeItem(listaCongelados, remover)
+            } else if (temItem(listaDoces, remover)) {
+                removeItem(listaDoces, remover)
             } else {
                 alert('O item digitado não está em nenhuma lista')
             }
         }
         adicionar = prompt('Você deseja adicionar ou remover um item da sua lista? Digite "1" para adicionar ou "2" para remover! Caso queira encerrar e ver sua lista, digite outra coisa')
-        break
     }
     
     alert(`Sua lista de compras é:
@@ -86,4 +77,14 @@ function main() {
     Laticínios: ${listaLaticinios};
     Congelados: ${listaCongelados};
     Doces: ${listaDoces}`)
+}
+
+function removeItem(lista, item) {
+    let posicao = lista.indexOf(item)
+    lista.splice(posicao, 1)
+    alert('Item removido com sucesso!')
+}
+
+function temItem(lista, item) {
+    return lista.includes(' ' + item)
 }
